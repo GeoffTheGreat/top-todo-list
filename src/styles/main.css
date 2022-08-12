@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.main--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main--content {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+}
+
+.main--header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid grey;
+  width: max(100%);
+}
+.logo {
+  height: 37px;
+}
+.logo--div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.add--task {
+  border-radius: 20px;
+}
+.todo--tree {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 5px;
+  padding: 10px;
+  justify-items: start;
+  align-content: flex-start;
+  border-right: 1px solid grey;
+}
+.main--content {
+  height: calc(95vh - 50px);
+}
