@@ -17,7 +17,8 @@ function setHeader() {
 
   const addTask = document.createElement("button");
   addTask.setAttribute("id", "addTask");
-  addTask.classList.add("add--task");
+  addTask.classList.add("add--task", "pointer");
+
   addTask.textContent = "+ Add task";
   header.appendChild(addTask);
 }

@@ -6,7 +6,10 @@ function navTree() {
   tree.appendChild(homeIcon);
 
   const homeText = document.createElement("p");
+  homeText.setAttribute("id", "home");
+  homeText.classList.add("pointer");
   homeText.textContent = `Home`;
+
   tree.appendChild(homeText);
 
   const todayIcon = document.createElement("i");
@@ -14,6 +17,8 @@ function navTree() {
   tree.appendChild(todayIcon);
 
   const todayText = document.createElement("p");
+  todayText.setAttribute("id", "today");
+  todayText.classList.add("pointer");
   todayText.textContent = "Today";
   tree.appendChild(todayText);
 
@@ -22,9 +27,26 @@ function navTree() {
   tree.appendChild(thisWeekIcon);
 
   const thisWeekText = document.createElement("p");
+  thisWeekText.setAttribute("id", "thisWeek");
+  thisWeekText.classList.add("pointer");
   thisWeekText.textContent = "This Week";
   tree.appendChild(thisWeekText);
 
   const projectHeading = document.createElement("h2");
+  projectHeading.classList.add("project--heading");
+
+  projectHeading.textContent = "Projects";
+  tree.appendChild(projectHeading);
+
+  const projectList = document.createElement("ul");
+  projectList.classList.add("project--list");
+  projectList.setAttribute("id", "projectList");
+  tree.appendChild(projectList);
+
+  const addNewProject = document.createElement("p");
+  addNewProject.classList.add("new--project", "pointer");
+  addNewProject.setAttribute("id", "newProject");
+  addNewProject.textContent = "+ Add new Project";
+  tree.appendChild(addNewProject);
 }
 export default navTree;

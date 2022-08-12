@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&family=Roboto:wght@300&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 html,
 body {
@@ -37,12 +39,30 @@ body {
 .todo--tree {
   display: grid;
   grid-template-columns: min-content auto;
-  gap: 5px;
+  gap: 10px;
   padding: 10px;
-  justify-items: start;
+  justify-content: center;
   align-content: flex-start;
   border-right: 1px solid grey;
 }
 .main--content {
   height: calc(95vh - 50px);
+}
+.project--heading {
+  border-top: 1px solid grey;
+  margin-top: 20px;
+  padding: 10px;
+  grid-column: 1/-1;
+}
+.project--list {
+  list-style: none;
+  grid-column: 1/-1;
+}
+.new--project {
+  grid-column: 1/-1;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+.pointer {
+  cursor: pointer;
 }
