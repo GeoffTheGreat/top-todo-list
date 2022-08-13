@@ -10,7 +10,7 @@ import {
   clearProjectForm,
   deleteProjectItem,
 } from "./addProject.js";
-
+import { getTasks } from "./taskView";
 setHeader();
 navTree();
 updateProjects();
@@ -48,12 +48,15 @@ function assignTask() {
   let task = addTask();
   if (task !== null) {
     newTask(task);
+    newProject(task.project);
+    updateProjects();
+    updateListEventListener();
   }
 }
 
 function projectFormValidation() {
   const project = document.getElementById("projectFormInput");
-  if (project.value !== "") {
+  if (project.value.trim() !== "") {
     newProject(project.value);
     updateProjects();
     updateListEventListener();
@@ -76,6 +79,8 @@ function deleteThisProject(e) {
   updateListEventListener();
 }
 function displayProjectSet(e) {
-  alert(e.target.id);
-  console.log(e);
+  let toDisplay = getTasks(e.target.id);
+  console.log(toDisplay);
+  if (toDisplay.length > 0) {
+  }
 }

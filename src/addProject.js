@@ -12,7 +12,7 @@ function clearProjectForm() {
 function newProject(project) {
   let projects;
   if (localStorage.getItem("projects") !== null) {
-    if (indexOfProject(project) < 0) {
+    if (indexOfProject(project) < 0 && project.trim() !== "") {
       projects = JSON.parse(localStorage.getItem("projects"));
       projects.push(project);
       localStorage.setItem("projects", JSON.stringify(projects));
@@ -30,9 +30,7 @@ function indexOfProject(project) {
 
 function updateProjects() {
   const projectList = document.getElementById("projectList");
-  // while (projectList.childElementCount > 0) {
-  //   projectList.removeChild(projectList.firstChild);
-  // }
+
   let projects = JSON.parse(localStorage.getItem("projects"));
   let project = "";
   for (let i = 0; i < projects.length; i++) {
@@ -50,6 +48,7 @@ function deleteProjectItem(e) {
   localStorage.setItem("projects", JSON.stringify(projects));
   updateProjects();
 }
+
 export {
   newProject,
   indexOfProject,

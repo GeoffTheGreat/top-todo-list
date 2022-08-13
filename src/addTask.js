@@ -25,7 +25,7 @@ function addTask() {
   if (dueDate.value === "") {
     alert(`Due date can't be empty `);
   }
-  if (dueDate.value !== "" && taskTitle.value !== "") {
+  if (dueDate.value.trim() !== "" && taskTitle.value.trim() !== "") {
     let task = {
       title: taskTitle.value,
       notes: notes.value,
