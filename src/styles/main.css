@@ -66,3 +66,49 @@ body {
 .pointer {
   cursor: pointer;
 }
+.add--task--form,
+.add--project--from {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(5, 5, 5, 0.185);
+}
+
+.form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  gap: 10px;
+  border-radius: 10px;
+  border: 2px ridge grey;
+}
+li {
+  margin: 10px;
+  display: flex;
+}
+.fa-li:hover {
+  color: red;
+  background-color: rgba(17, 7, 7, 0.082);
+}
+.projectItem:hover {
+  background-color: aquamarine;
+}
+.projectItem {
+  width: 100%;
+}
+.tasks {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 10px auto;
+}
+.aTask {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content min-content;
+}

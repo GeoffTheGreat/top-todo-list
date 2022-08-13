@@ -39,7 +39,7 @@ function navTree() {
   tree.appendChild(projectHeading);
 
   const projectList = document.createElement("ul");
-  projectList.classList.add("project--list");
+  projectList.classList.add("project--list", "fa-ul");
   projectList.setAttribute("id", "projectList");
   tree.appendChild(projectList);
 
