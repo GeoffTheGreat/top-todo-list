@@ -1,4 +1,5 @@
 import { isWithinInterval, addDays } from "date-fns";
+import is from "date-fns/esm/locale/is/index.js";
 function getTasks(filter) {
   if (localStorage.getItem("tasks") !== null) {
     let tasks = JSON.parse(localStorage.getItem("tasks"));
@@ -93,6 +94,24 @@ function getTaskToEdit(taskId) {
   }
   return task;
 }
+function updateCompleted(e) {
+  let isChecked = e.target.checked;
+  let taskId = e.target.id;
+  taskId = taskId.replace("task", "");
+  taskId = taskId[0];
+
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
+
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].taskId == taskId) {
+      tasks[i].completed = isChecked;
+    }
+  }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  console.log(e, taskId, isChecked);
+
+  document.getElementById(`task${taskId}-title`).classList.toggle("done");
+}
 function removeTask(e) {
   let taskId = e.target.id;
   taskId = taskId.replace("task", "");
@@ -116,10 +135,23 @@ function displayTasks(toDisplay) {
     <p class="taskDueDate" id="task${toDisplay[i].taskId}-dueDate">${toDisplay[i].dueDate}</p>
     <i class="fa-solid fa-pen-to-square pointer taskEdit" id="task${toDisplay[i].taskId}-edit"></i>
     <i class="fa-solid fa-trash-can pointer taskRemove" id="task${toDisplay[i].taskId}-delete" ></i>
-    <p class="taskNotes" id="task${toDisplay[i].taskId}-notes">Notes: ${toDisplay[i].notes}</p>
+    <p class="taskNotes hidden" id="task${toDisplay[i].taskId}-notes">Notes: ${toDisplay[i].notes}</p>
     </div>`;
   }
   return toAppend;
 }
+function viewNotes(taskTitleId) {
+  let notesId = taskTitleId.replace("title", "notes");
+  let notes = document.getElementById(notesId);
+  let notesClasses = notes.classList.toggle("hidden");
+}
 
-export { getTasks, displayTasks, setPriorities, getTaskToEdit, removeTask };
+export {
+  getTasks,
+  displayTasks,
+  setPriorities,
+  getTaskToEdit,
+  removeTask,
+  viewNotes,
+  updateCompleted,
+};

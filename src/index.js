@@ -23,6 +23,8 @@ import {
   setPriorities,
   getTaskToEdit,
   removeTask,
+  viewNotes,
+  updateCompleted,
 } from "./taskView";
 setHeader();
 navTree();
@@ -102,8 +104,13 @@ function updateListEventListener() {
 }
 function updateTaskEventListener() {
   const taskCheck = Array.from(document.getElementsByClassName("taskCheck"));
-
+  taskCheck.forEach((check) => {
+    check.addEventListener("change", setCompleted);
+  });
   const titles = Array.from(document.getElementsByClassName("taskTitle"));
+  titles.forEach((title) => {
+    title.addEventListener("click", displayNotes);
+  });
   const edits = Array.from(document.getElementsByClassName("taskEdit"));
   edits.forEach((edit) => {
     edit.addEventListener("click", editTask);
@@ -112,6 +119,9 @@ function updateTaskEventListener() {
   deletes.forEach((del) => {
     del.addEventListener("click", removeTask);
   });
+}
+function displayNotes(e) {
+  viewNotes(e.target.id);
 }
 function deleteThisProject(e) {
   deleteProjectItem(e);
@@ -167,4 +177,8 @@ function updateTaskDisplay() {
   updateTaskEventListener();
   updateProjects();
   updateListEventListener();
+}
+function setCompleted(e) {
+  console.log(e.target.checked);
+  updateCompleted(e);
 }
