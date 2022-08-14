@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&family=Roboto:wght@300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  box-sizing: border-box;\n  font-family: \"Roboto\", sans-serif;\n}\nhtml,\nbody {\n  height: 100%;\n}\n.main--container {\n  display: flex;\n  flex-direction: column;\n}\n\n.main--content {\n  display: grid;\n  grid-template-columns: 0.3fr 1fr;\n}\n\n.main--header {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem;\n  border: 1px solid grey;\n  width: max(100%);\n}\n.logo {\n  height: 37px;\n}\n.logo--div {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.add--task {\n  border-radius: 20px;\n}\n.todo--tree {\n  display: grid;\n  grid-template-columns: min-content auto;\n  gap: 10px;\n  padding: 10px;\n  justify-content: center;\n  align-content: flex-start;\n  border-right: 1px solid grey;\n}\n.main--content {\n  height: calc(95vh - 50px);\n}\n.project--heading {\n  border-top: 1px solid grey;\n  margin-top: 20px;\n  padding: 10px;\n  grid-column: 1/-1;\n}\n.project--list {\n  list-style: none;\n  grid-column: 1/-1;\n}\n.new--project {\n  grid-column: 1/-1;\n  font-family: \"Roboto\";\n  font-weight: 600;\n}\n.pointer {\n  cursor: pointer;\n}\n.add--task--form,\n.add--project--from {\n  display: none;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  justify-content: center;\n  align-items: center;\n  background-color: rgba(5, 5, 5, 0.185);\n}\n\n.form {\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  background-color: aliceblue;\n  gap: 10px;\n  border-radius: 10px;\n  border: 2px ridge grey;\n}\nli {\n  margin: 10px;\n  display: flex;\n}\n.fa-li:hover {\n  color: red;\n  background-color: rgba(17, 7, 7, 0.082);\n}\n.projectItem:hover {\n  background-color: aquamarine;\n}\n.projectItem {\n  width: 100%;\n}\n.tasks {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n  margin: 10px auto;\n  gap: 10px;\n}\n.aTask {\n  display: grid;\n  gap: 10px;\n  grid-template-columns: min-content 1fr auto auto auto;\n}\n.taskNotes {\n  display: none;\n  justify-self: center;\n  grid-column: 1/-1;\n}\n.low {\n  background-color: rgba(17, 255, 17, 0.404);\n}\n.medium {\n  background-color: rgba(255, 166, 0, 0.541);\n}\n.high {\n  background-color: rgba(255, 0, 0, 0.349);\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AACA;EACE,SAAS;EACT,sBAAsB;EACtB,iCAAiC;AACnC;AACA;;EAEE,YAAY;AACd;AACA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,gCAAgC;AAClC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,aAAa;EACb,sBAAsB;EACtB,gBAAgB;AAClB;AACA;EACE,YAAY;AACd;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;AACX;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,uCAAuC;EACvC,SAAS;EACT,aAAa;EACb,uBAAuB;EACvB,yBAAyB;EACzB,4BAA4B;AAC9B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,0BAA0B;EAC1B,gBAAgB;EAChB,aAAa;EACb,iBAAiB;AACnB;AACA;EACE,gBAAgB;EAChB,iBAAiB;AACnB;AACA;EACE,iBAAiB;EACjB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,eAAe;AACjB;AACA;;EAEE,aAAa;EACb,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,OAAO;EACP,QAAQ;EACR,uBAAuB;EACvB,mBAAmB;EACnB,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,2BAA2B;EAC3B,SAAS;EACT,mBAAmB;EACnB,sBAAsB;AACxB;AACA;EACE,YAAY;EACZ,aAAa;AACf;AACA;EACE,UAAU;EACV,uCAAuC;AACzC;AACA;EACE,4BAA4B;AAC9B;AACA;EACE,WAAW;AACb;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,UAAU;EACV,iBAAiB;EACjB,SAAS;AACX;AACA;EACE,aAAa;EACb,SAAS;EACT,qDAAqD;AACvD;AACA;EACE,aAAa;EACb,oBAAoB;EACpB,iBAAiB;AACnB;AACA;EACE,0CAA0C;AAC5C;AACA;EACE,0CAA0C;AAC5C;AACA;EACE,wCAAwC;AAC1C","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&family=Roboto:wght@300&display=swap\");\n* {\n  margin: 0;\n  box-sizing: border-box;\n  font-family: \"Roboto\", sans-serif;\n}\nhtml,\nbody {\n  height: 100%;\n}\n.main--container {\n  display: flex;\n  flex-direction: column;\n}\n\n.main--content {\n  display: grid;\n  grid-template-columns: 0.3fr 1fr;\n}\n\n.main--header {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem;\n  border: 1px solid grey;\n  width: max(100%);\n}\n.logo {\n  height: 37px;\n}\n.logo--div {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.add--task {\n  border-radius: 20px;\n}\n.todo--tree {\n  display: grid;\n  grid-template-columns: min-content auto;\n  gap: 10px;\n  padding: 10px;\n  justify-content: center;\n  align-content: flex-start;\n  border-right: 1px solid grey;\n}\n.main--content {\n  height: calc(95vh - 50px);\n}\n.project--heading {\n  border-top: 1px solid grey;\n  margin-top: 20px;\n  padding: 10px;\n  grid-column: 1/-1;\n}\n.project--list {\n  list-style: none;\n  grid-column: 1/-1;\n}\n.new--project {\n  grid-column: 1/-1;\n  font-family: \"Roboto\";\n  font-weight: 600;\n}\n.pointer {\n  cursor: pointer;\n}\n.add--task--form,\n.add--project--from {\n  display: none;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  justify-content: center;\n  align-items: center;\n  background-color: rgba(5, 5, 5, 0.185);\n}\n\n.form {\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  background-color: aliceblue;\n  gap: 10px;\n  border-radius: 10px;\n  border: 2px ridge grey;\n}\nli {\n  margin: 10px;\n  display: flex;\n}\n.fa-li:hover {\n  color: red;\n  background-color: rgba(17, 7, 7, 0.082);\n}\n.projectItem:hover {\n  background-color: aquamarine;\n}\n.projectItem {\n  width: 100%;\n}\n.tasks {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n  margin: 10px auto;\n  gap: 10px;\n}\n.aTask {\n  display: grid;\n  gap: 10px;\n  grid-template-columns: min-content 1fr auto auto auto;\n}\n.taskNotes {\n  display: none;\n  justify-self: center;\n  grid-column: 1/-1;\n}\n.low {\n  background-color: rgba(17, 255, 17, 0.404);\n}\n.medium {\n  background-color: rgba(255, 166, 0, 0.541);\n}\n.high {\n  background-color: rgba(255, 0, 0, 0.349);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  box-sizing: border-box;\n  font-family: \"Roboto\", sans-serif;\n}\nhtml,\nbody {\n  height: 100%;\n}\n.main--container {\n  display: flex;\n  flex-direction: column;\n}\n\n.main--content {\n  display: grid;\n  grid-template-columns: 0.3fr 1fr;\n}\n\n.main--header {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem;\n  border: 1px solid grey;\n  width: max(100%);\n}\n.logo {\n  height: 37px;\n}\n.logo--div {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.add--task {\n  border-radius: 20px;\n}\n.todo--tree {\n  display: grid;\n  grid-template-columns: min-content auto;\n  gap: 10px;\n  padding: 10px;\n  justify-content: center;\n  align-content: flex-start;\n  border-right: 1px solid grey;\n}\n.main--content {\n  height: calc(95vh - 50px);\n}\n.project--heading {\n  border-top: 1px solid grey;\n  margin-top: 20px;\n  padding: 10px;\n  grid-column: 1/-1;\n}\n.project--list {\n  list-style: none;\n  grid-column: 1/-1;\n}\n.new--project {\n  grid-column: 1/-1;\n  font-family: \"Roboto\";\n  font-weight: 600;\n}\n.pointer {\n  cursor: pointer;\n}\n.add--task--form,\n.add--project--from {\n  display: none;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  justify-content: center;\n  align-items: center;\n  background-color: rgba(5, 5, 5, 0.185);\n}\n\n.form {\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  background-color: aliceblue;\n  gap: 10px;\n  border-radius: 10px;\n  border: 2px ridge grey;\n}\nli {\n  margin: 10px;\n  display: flex;\n}\n.fa-li:hover {\n  color: red;\n  background-color: rgba(17, 7, 7, 0.082);\n}\n.projectItem:hover {\n  background-color: aquamarine;\n}\n.projectItem {\n  width: 100%;\n}\n.tasks {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n  margin: 10px auto;\n  gap: 10px;\n}\n.aTask {\n  display: grid;\n  gap: 10px;\n  grid-template-columns: min-content 1fr auto auto auto;\n}\n.taskNotes {\n  justify-self: center;\n  grid-column: 1/-1;\n}\n.low {\n  background-color: rgba(17, 255, 17, 0.404);\n}\n.medium {\n  background-color: rgba(255, 166, 0, 0.541);\n}\n.high {\n  background-color: rgba(255, 0, 0, 0.349);\n}\n.hidden {\n  display: none;\n}\n.done {\n  text-decoration: line-through;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AACA;EACE,SAAS;EACT,sBAAsB;EACtB,iCAAiC;AACnC;AACA;;EAEE,YAAY;AACd;AACA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,gCAAgC;AAClC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,aAAa;EACb,sBAAsB;EACtB,gBAAgB;AAClB;AACA;EACE,YAAY;AACd;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;AACX;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,uCAAuC;EACvC,SAAS;EACT,aAAa;EACb,uBAAuB;EACvB,yBAAyB;EACzB,4BAA4B;AAC9B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,0BAA0B;EAC1B,gBAAgB;EAChB,aAAa;EACb,iBAAiB;AACnB;AACA;EACE,gBAAgB;EAChB,iBAAiB;AACnB;AACA;EACE,iBAAiB;EACjB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,eAAe;AACjB;AACA;;EAEE,aAAa;EACb,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,OAAO;EACP,QAAQ;EACR,uBAAuB;EACvB,mBAAmB;EACnB,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,2BAA2B;EAC3B,SAAS;EACT,mBAAmB;EACnB,sBAAsB;AACxB;AACA;EACE,YAAY;EACZ,aAAa;AACf;AACA;EACE,UAAU;EACV,uCAAuC;AACzC;AACA;EACE,4BAA4B;AAC9B;AACA;EACE,WAAW;AACb;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,UAAU;EACV,iBAAiB;EACjB,SAAS;AACX;AACA;EACE,aAAa;EACb,SAAS;EACT,qDAAqD;AACvD;AACA;EACE,oBAAoB;EACpB,iBAAiB;AACnB;AACA;EACE,0CAA0C;AAC5C;AACA;EACE,0CAA0C;AAC5C;AACA;EACE,wCAAwC;AAC1C;AACA;EACE,aAAa;AACf;AACA;EACE,6BAA6B;AAC/B","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&family=Roboto:wght@300&display=swap\");\n* {\n  margin: 0;\n  box-sizing: border-box;\n  font-family: \"Roboto\", sans-serif;\n}\nhtml,\nbody {\n  height: 100%;\n}\n.main--container {\n  display: flex;\n  flex-direction: column;\n}\n\n.main--content {\n  display: grid;\n  grid-template-columns: 0.3fr 1fr;\n}\n\n.main--header {\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem;\n  border: 1px solid grey;\n  width: max(100%);\n}\n.logo {\n  height: 37px;\n}\n.logo--div {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n.add--task {\n  border-radius: 20px;\n}\n.todo--tree {\n  display: grid;\n  grid-template-columns: min-content auto;\n  gap: 10px;\n  padding: 10px;\n  justify-content: center;\n  align-content: flex-start;\n  border-right: 1px solid grey;\n}\n.main--content {\n  height: calc(95vh - 50px);\n}\n.project--heading {\n  border-top: 1px solid grey;\n  margin-top: 20px;\n  padding: 10px;\n  grid-column: 1/-1;\n}\n.project--list {\n  list-style: none;\n  grid-column: 1/-1;\n}\n.new--project {\n  grid-column: 1/-1;\n  font-family: \"Roboto\";\n  font-weight: 600;\n}\n.pointer {\n  cursor: pointer;\n}\n.add--task--form,\n.add--project--from {\n  display: none;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  justify-content: center;\n  align-items: center;\n  background-color: rgba(5, 5, 5, 0.185);\n}\n\n.form {\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n  background-color: aliceblue;\n  gap: 10px;\n  border-radius: 10px;\n  border: 2px ridge grey;\n}\nli {\n  margin: 10px;\n  display: flex;\n}\n.fa-li:hover {\n  color: red;\n  background-color: rgba(17, 7, 7, 0.082);\n}\n.projectItem:hover {\n  background-color: aquamarine;\n}\n.projectItem {\n  width: 100%;\n}\n.tasks {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n  margin: 10px auto;\n  gap: 10px;\n}\n.aTask {\n  display: grid;\n  gap: 10px;\n  grid-template-columns: min-content 1fr auto auto auto;\n}\n.taskNotes {\n  justify-self: center;\n  grid-column: 1/-1;\n}\n.low {\n  background-color: rgba(17, 255, 17, 0.404);\n}\n.medium {\n  background-color: rgba(255, 166, 0, 0.541);\n}\n.high {\n  background-color: rgba(255, 0, 0, 0.349);\n}\n.hidden {\n  display: none;\n}\n.done {\n  text-decoration: line-through;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1067,10 +1067,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getTaskToEdit": () => (/* binding */ getTaskToEdit),
 /* harmony export */   "getTasks": () => (/* binding */ getTasks),
 /* harmony export */   "removeTask": () => (/* binding */ removeTask),
-/* harmony export */   "setPriorities": () => (/* binding */ setPriorities)
+/* harmony export */   "setPriorities": () => (/* binding */ setPriorities),
+/* harmony export */   "updateCompleted": () => (/* binding */ updateCompleted),
+/* harmony export */   "viewNotes": () => (/* binding */ viewNotes)
 /* harmony export */ });
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/addDays/index.js");
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/isWithinInterval/index.js");
+
 
 function getTasks(filter) {
   if (localStorage.getItem("tasks") !== null) {
@@ -1166,6 +1169,24 @@ function getTaskToEdit(taskId) {
   }
   return task;
 }
+function updateCompleted(e) {
+  let isChecked = e.target.checked;
+  let taskId = e.target.id;
+  taskId = taskId.replace("task", "");
+  taskId = taskId[0];
+
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
+
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].taskId == taskId) {
+      tasks[i].completed = isChecked;
+    }
+  }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  console.log(e, taskId, isChecked);
+
+  document.getElementById(`task${taskId}-title`).classList.toggle("done");
+}
 function removeTask(e) {
   let taskId = e.target.id;
   taskId = taskId.replace("task", "");
@@ -1189,10 +1210,15 @@ function displayTasks(toDisplay) {
     <p class="taskDueDate" id="task${toDisplay[i].taskId}-dueDate">${toDisplay[i].dueDate}</p>
     <i class="fa-solid fa-pen-to-square pointer taskEdit" id="task${toDisplay[i].taskId}-edit"></i>
     <i class="fa-solid fa-trash-can pointer taskRemove" id="task${toDisplay[i].taskId}-delete" ></i>
-    <p class="taskNotes" id="task${toDisplay[i].taskId}-notes">Notes: ${toDisplay[i].notes}</p>
+    <p class="taskNotes hidden" id="task${toDisplay[i].taskId}-notes">Notes: ${toDisplay[i].notes}</p>
     </div>`;
   }
   return toAppend;
+}
+function viewNotes(taskTitleId) {
+  let notesId = taskTitleId.replace("title", "notes");
+  let notes = document.getElementById(notesId);
+  let notesClasses = notes.classList.toggle("hidden");
 }
 
 
@@ -1412,8 +1438,13 @@ function updateListEventListener() {
 }
 function updateTaskEventListener() {
   const taskCheck = Array.from(document.getElementsByClassName("taskCheck"));
-
+  taskCheck.forEach((check) => {
+    check.addEventListener("change", setCompleted);
+  });
   const titles = Array.from(document.getElementsByClassName("taskTitle"));
+  titles.forEach((title) => {
+    title.addEventListener("click", displayNotes);
+  });
   const edits = Array.from(document.getElementsByClassName("taskEdit"));
   edits.forEach((edit) => {
     edit.addEventListener("click", editTask);
@@ -1422,6 +1453,9 @@ function updateTaskEventListener() {
   deletes.forEach((del) => {
     del.addEventListener("click", _taskView__WEBPACK_IMPORTED_MODULE_5__.removeTask);
   });
+}
+function displayNotes(e) {
+  (0,_taskView__WEBPACK_IMPORTED_MODULE_5__.viewNotes)(e.target.id);
 }
 function deleteThisProject(e) {
   (0,_addProject_js__WEBPACK_IMPORTED_MODULE_4__.deleteProjectItem)(e);
@@ -1477,6 +1511,10 @@ function updateTaskDisplay() {
   updateTaskEventListener();
   (0,_addProject_js__WEBPACK_IMPORTED_MODULE_4__.updateProjects)();
   updateListEventListener();
+}
+function setCompleted(e) {
+  console.log(e.target.checked);
+  (0,_taskView__WEBPACK_IMPORTED_MODULE_5__.updateCompleted)(e);
 }
 
 })();
