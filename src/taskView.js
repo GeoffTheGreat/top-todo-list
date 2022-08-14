@@ -59,7 +59,67 @@ function getTasks(filter) {
 
       return returnTasks;
     }
+  } else {
+    return [];
   }
 }
 
-export { getTasks };
+function setPriorities(toDisplay) {
+  for (let i = 0; i < toDisplay.length; i++) {
+    let priority = toDisplay[i].priority;
+
+    let task = document.getElementById(`task${toDisplay[i].taskId}-title`);
+    switch (priority) {
+      case "low":
+        task.classList.add("low");
+        break;
+      case "medium":
+        task.classList.add("medium");
+
+        break;
+      case "high":
+        task.classList.add("high");
+        break;
+    }
+  }
+}
+function getTaskToEdit(taskId) {
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
+  let task;
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].taskId == taskId) {
+      task = tasks[i];
+    }
+  }
+  return task;
+}
+function removeTask(e) {
+  let taskId = e.target.id;
+  taskId = taskId.replace("task", "");
+  taskId = taskId[0];
+  document.getElementById(`task${taskId}`).remove();
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
+
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].taskId == taskId) {
+      tasks.splice(i, 1);
+    }
+  }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+function displayTasks(toDisplay) {
+  let toAppend = "";
+  for (let i = 0; i < toDisplay.length; i++) {
+    toAppend += `<div class="aTask" id="task${toDisplay[i].taskId}">
+    <input type="checkbox" name="task${toDisplay[i].taskId}-check" id="task${toDisplay[i].taskId}-check" class="taskCheck pointer">
+    <p class="taskTitle pointer" id="task${toDisplay[i].taskId}-title">${toDisplay[i].title}</p>
+    <p class="taskDueDate" id="task${toDisplay[i].taskId}-dueDate">${toDisplay[i].dueDate}</p>
+    <i class="fa-solid fa-pen-to-square pointer taskEdit" id="task${toDisplay[i].taskId}-edit"></i>
+    <i class="fa-solid fa-trash-can pointer taskRemove" id="task${toDisplay[i].taskId}-delete" ></i>
+    <p class="taskNotes" id="task${toDisplay[i].taskId}-notes">Notes: ${toDisplay[i].notes}</p>
+    </div>`;
+  }
+  return toAppend;
+}
+
+export { getTasks, displayTasks, setPriorities, getTaskToEdit, removeTask };

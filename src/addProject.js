@@ -33,11 +33,26 @@ function updateProjects() {
 
   let projects = JSON.parse(localStorage.getItem("projects"));
   let project = "";
-  for (let i = 0; i < projects.length; i++) {
-    project += `<li id="project${i}" class="pointer"><span class="fa-li pointer fa-regular fa-trash-can"></span>     <span id="span${i}"class="projectItem pointer">${projects[i]}</span></li>`;
-  }
+  if (projects !== null) {
+    for (let i = 0; i < projects.length; i++) {
+      project += `<li id="project${i}" class="pointer"><span class="fa-li pointer fa-regular fa-trash-can"></span>     <span id="span${i}"class="projectItem pointer">${projects[i]}</span></li>`;
+    }
 
-  projectList.innerHTML = project;
+    projectList.innerHTML = project;
+  }
+}
+function updateProjectsFromTasks() {
+  let projects = JSON.parse(localStorage.getItem("projects"));
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
+  for (let i = 0; i < tasks.length; i++) {
+    if (
+      tasks[i].project.trim() !== "" &&
+      projects.indexOf(tasks[i].project) < 0
+    ) {
+      projects.push(tasks[i].project);
+    }
+  }
+  localStorage.setItem("projects", JSON.stringify(projects));
 }
 function deleteProjectItem(e) {
   const listParent = e.target.parentNode.id;
@@ -56,4 +71,5 @@ export {
   displayProjectForm,
   clearProjectForm,
   deleteProjectItem,
+  updateProjectsFromTasks,
 };

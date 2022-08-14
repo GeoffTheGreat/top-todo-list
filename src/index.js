@@ -1,7 +1,13 @@
 import "./styles/main.css";
 import setHeader from "./header.js";
 import navTree from "./navTree.js";
-import { displayTaskForm, addTask, clearTaskForm, newTask } from "./addTask.js";
+import {
+  displayTaskForm,
+  addTask,
+  clearTaskForm,
+  newTask,
+  displayEditForm,
+} from "./addTask.js";
 import {
   newProject,
   indexOfProject,
@@ -9,11 +15,17 @@ import {
   displayProjectForm,
   clearProjectForm,
   deleteProjectItem,
+  updateProjectsFromTasks,
 } from "./addProject.js";
-import { getTasks } from "./taskView";
+import {
+  getTasks,
+  displayTasks,
+  setPriorities,
+  getTaskToEdit,
+  removeTask,
+} from "./taskView";
 setHeader();
 navTree();
-updateProjects();
 
 const home = document.getElementById("home");
 home.addEventListener("click", displayProjectSet);
@@ -25,10 +37,7 @@ const thisWeek = document.getElementById("thisWeek");
 thisWeek.addEventListener("click", displayProjectSet);
 
 const addTaskBtn = document.getElementById("addTask");
-addTaskBtn.addEventListener("click", displayTaskForm);
-
-const addTaskSubmit = document.getElementById("addTaskSubmit");
-addTaskSubmit.addEventListener("click", assignTask);
+addTaskBtn.addEventListener("click", newTaskProcess);
 
 const addTaskCancel = document.getElementById("addTaskCancel");
 addTaskCancel.addEventListener("click", clearTaskForm);
@@ -42,16 +51,34 @@ projectSubmitBtn.addEventListener("click", projectFormValidation);
 const projectCancelBtn = document.getElementById("addProjectCancel");
 projectCancelBtn.addEventListener("click", clearProjectForm);
 
+if (localStorage.getItem("tasks") !== null) {
+  updateProjectsFromTasks();
+  let toDisplay = getTasks("home");
+  document.getElementById("tasks").innerHTML = displayTasks(toDisplay);
+  setPriorities(toDisplay);
+  updateTaskEventListener();
+}
+updateProjects();
 updateListEventListener();
 
-function assignTask() {
+function newTaskProcess() {
+  displayTaskForm();
+  const addTaskSubmit = document.getElementById("addTaskSubmit");
+  addTaskSubmit.addEventListener("click", assignTask);
+}
+
+function assignTask(e) {
   let task = addTask();
   if (task !== null) {
     newTask(task);
     newProject(task.project);
     updateProjects();
     updateListEventListener();
+    e.target.removeEventListener("click", assignTask);
   }
+  let toDisplay = getTasks("home");
+  document.getElementById("tasks").innerHTML = displayTasks(toDisplay);
+  setPriorities(toDisplay);
 }
 
 function projectFormValidation() {
@@ -73,14 +100,71 @@ function updateListEventListener() {
     item.addEventListener("click", deleteThisProject);
   });
 }
+function updateTaskEventListener() {
+  const taskCheck = Array.from(document.getElementsByClassName("taskCheck"));
 
+  const titles = Array.from(document.getElementsByClassName("taskTitle"));
+  const edits = Array.from(document.getElementsByClassName("taskEdit"));
+  edits.forEach((edit) => {
+    edit.addEventListener("click", editTask);
+  });
+  const deletes = Array.from(document.getElementsByClassName("taskRemove"));
+  deletes.forEach((del) => {
+    del.addEventListener("click", removeTask);
+  });
+}
 function deleteThisProject(e) {
   deleteProjectItem(e);
   updateListEventListener();
 }
 function displayProjectSet(e) {
   let toDisplay = getTasks(e.target.id);
-  console.log(toDisplay);
   if (toDisplay.length > 0) {
+    document.getElementById("tasks").innerHTML = displayTasks(toDisplay);
+  } else {
+    document.getElementById("tasks").innerHTML = "";
   }
+  setPriorities(toDisplay);
+  updateTaskEventListener();
+}
+
+function editTask(e) {
+  let taskId = e.target.id;
+  taskId = taskId.replace("task", "");
+  taskId = taskId[0];
+  let taskToEdit = getTaskToEdit(taskId);
+  displayEditForm(taskToEdit);
+  taskToUpdate = taskToEdit;
+  const addTaskSubmit = document.getElementById("addTaskSubmit");
+  addTaskSubmit.addEventListener("click", updateTask);
+}
+var taskToUpdate = {};
+function updateTask(e) {
+  e.target.removeEventListener("click", updateTask);
+
+  let newInfo = addTask();
+  let taskToUpdateInfo = taskToUpdate;
+  taskToUpdateInfo.title = newInfo.title;
+  taskToUpdateInfo.dueDate = newInfo.dueDate;
+  taskToUpdateInfo.notes = newInfo.notes;
+  taskToUpdateInfo.priority = newInfo.priority;
+  taskToUpdateInfo.project = newInfo.project;
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].taskId == taskToUpdateInfo.taskId) {
+      tasks[i] = taskToUpdateInfo;
+    }
+  }
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  updateTaskDisplay();
+}
+
+function updateTaskDisplay() {
+  updateProjectsFromTasks();
+  let toDisplay = getTasks("home");
+  document.getElementById("tasks").innerHTML = displayTasks(toDisplay);
+  setPriorities(toDisplay);
+  updateTaskEventListener();
+  updateProjects();
+  updateListEventListener();
 }
